@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct cell {
+    int elem;
+    struct cell *next;
+} ctype, *SET;
+
+void insertSorted (int num, SET* S);
+ctype* unionSorted (SET A, SET B);
+
+int main ()
+{
+    SET A=NULL;
+    SET B=NULL;
+    ctype *U=NULL;
+    int choice, input;
+    do {
+        printf ("1-Insert an element into set A (Sorted)\n");
+        printf ("2-Insert an element into set B (Sorted)\n");
+        printf ("3-Exit\n");
+        printf ("Choose an option: ");
+        fflush(stdin);
+        scanf ("%d", &choice);
+        switch (choice) {
+            case 1:
+                printf ("Insert an element into set A: ");
+                fflush(stdin);
+                scanf ("%d", &input);
+                insertSorted (input, &A);
+                break;
+            case 2:
+                printf ("Insert an element into set B: ");
+                fflush(stdin);
+                scanf ("%d", &input);
+                break;
+            case 3:
+                printf ("Goodbye.");
+                break;
+            default:
+                printf ("Sorry.");
+        }
+    } while (choice!=3);
+    U=unionSorted (A, B);
+    return 0;
+}
+
+void insertSorted (int num, SET* S)
+{
+    SET* trav;
+    for (trav=S; *trav!=NULL && num>(*trav)->elem; trav=&(*trav)->next) {}
+}
+
+ctype* unionSorted (SET A, SET B)
+{
+    ctype *U;
+    return U;
+}
+

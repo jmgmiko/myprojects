@@ -1,8 +1,3 @@
-#define MAX 15
-
-#include <stdio.h>
-#include <stdlib.h>
-
 int *heapifyMin (int num[])
 {
 	int *sorted;
@@ -45,10 +40,10 @@ void sortMin (int sorted[])
 {
 	int temp, i, j, small, right, left, hold;
 	for (i=MAX-1; i>=1; i--) {
-			small=0;
+			small=j=0;
 			temp=sorted[i];
-			sorted[i]=sorted[small];
-			sorted[small]=temp;			
+			sorted[i]=sorted[j];
+			sorted[j]=temp;			
 			do {
 				j=small;
 				left=j*2+1;
@@ -71,10 +66,10 @@ void sortMax (int sorted[])
 {
 	int temp, i, j, big, right, left, hold;
 	for (i=MAX-1; i>=1; i--) {
-			big=0;
+			big=j=0;
 			temp=sorted[i];
-			sorted[i]=sorted[big];
-			sorted[big]=temp;			
+			sorted[i]=sorted[j];
+			sorted[j]=temp;			
 			do {
 				j=big;
 				left=j*2+1;
@@ -91,30 +86,4 @@ void sortMax (int sorted[])
 				}
 			} while (big!=j);
 	}	
-}
-
-int main ()
-{
-	int numbers [] = {4, 54, 1, 9, 21,
-					  34, 2, 39, 10, 109,
-					  11, 203, 1222, 19, 22};
-	int *min, *max;
-	int x;
-	min=heapifyMin (numbers);
-	sortMin (min);
-	printf ("Sorted array (descending order): ");
-	for (x=0; x<MAX; x++) {
-		printf ("%d ", min[x]);
-	}
-	printf ("\n");
-	max=heapifyMax (numbers);
-	sortMax (max);
-	printf ("Sorted array (ascending order): ");
-	for (x=0; x<MAX; x++) {
-		printf ("%d ", max[x]);
-	}
-	free (min);
-	free (max);
-	getch ();
-	return 0;
 }

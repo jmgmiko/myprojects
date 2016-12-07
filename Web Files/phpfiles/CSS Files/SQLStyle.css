@@ -1,0 +1,13 @@
+.block {
+    background-color: whitesmoke;
+    margin-top: 50px;
+    font-size: 20px;
+    font-family: Tahoma, sans-serif;
+    height: auto;
+    padding: 10px;
+    border: 5px solid darkblue;
+}
+
+.table {
+    border-color: black;
+}

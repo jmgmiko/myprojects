@@ -5,6 +5,7 @@ using namespace std;
 int partition (int arr[], int low, int high)
 {
 	int p=arr[high];
+	
 	int l=(low-1);
 	int i, temp, hold;
 	for (i=low; i<high; i++) {

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #define MAX 20
 
 typedef struct {
@@ -31,7 +32,7 @@ int main ()
     int choice;
     char data;
     do {
-        system ("clear");
+        system ("cls");
         printf ("1-Insert an element\n");
         printf ("2-Display all elements\n");
         printf ("3-Delete an element\n");
@@ -70,6 +71,7 @@ int main ()
             default:
                 printf ("Sorry.");
         }
+        getch ();
     } while (choice!=7);
     freedom (VH);
     return 0;

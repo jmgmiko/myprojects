@@ -1,0 +1,104 @@
+.box {
+	background-color: white;
+	height: auto;
+	margin-top: 20px;
+	padding: 10px;
+}
+
+#one {
+	background-color: #0092d2;
+	border-radius: 5px; 
+	height: auto;
+}
+
+#logo {
+	margin: 5px;
+	height: auto;
+	width: 70%;
+	border: 1px solid black;
+}
+
+.font {
+	font-family: 'Tahoma', sans-serif;
+	color: white;
+}
+
+#fonts {
+	display: inline;
+	font-size: 10px;
+}
+
+a {
+	text-decoration: underline;
+}
+
+li a {
+	text-decoration: none;
+	color: gray;
+	width: auto;
+}
+
+ol {
+	font-size: 12px;
+}
+
+.btn-group {
+	margin-top: 10px;
+	font-family: 'Tahoma', sans-serif;
+}
+
+footer {
+	margin-top: 10px;
+	border-top: 1px solid gray;
+	color: gray;
+	font-size: 12px;
+}
+
+#below li{
+	padding: 5px;
+}
+
+li {
+	display: inline-block;
+}
+
+ul{
+	display: inline;
+}
+
+.two {
+	margin-left: 15px;
+}
+
+.slot {
+	padding: 20em;
+}
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+	  height: 300px;
+      margin: auto;
+  }
+
+#myCarousel {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#slogan {
+	font-size: 25px;
+	font-family: 'Segoe UI', sans-serif;
+}
+
+#host {
+	height: 300px;
+}
+
+.pic {
+	width: 100%;
+}
+
+#baton {
+	height: 200px;
+}

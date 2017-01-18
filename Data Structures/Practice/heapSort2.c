@@ -3,6 +3,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void displayArr (int arr[], int size)
+{
+	int x;
+	for (x=0; x<=size; x++) {
+		printf ("%d, ",arr[x]);
+	}	
+	printf ("\n");
+}
+
 int *heapifyMin (int num[])
 {
 	int *sorted;
@@ -19,6 +28,8 @@ int *heapifyMin (int num[])
 			sorted[j]=temp;
 		}	
 	}
+	displayArr(sorted, MAX-1);
+	getch ();
 	return sorted;	
 }
 
@@ -38,6 +49,8 @@ int *heapifyMax (int num[])
 			sorted[j]=temp;
 		}	
 	}
+	displayArr (sorted, MAX-1);
+	getch ();
 	return sorted;	
 }
 
@@ -100,6 +113,8 @@ int main ()
 					  11, 203, 1222, 19, 22};
 	int *min, *max;
 	int x;
+	printf ("Old array: \n");
+	displayArr (numbers, MAX-1);
 	min=heapifyMin (numbers);
 	sortMin (min);
 	printf ("Sorted array (descending order): ");
@@ -107,6 +122,10 @@ int main ()
 		printf ("%d ", min[x]);
 	}
 	printf ("\n");
+	getch();
+	system ("cls");
+	printf ("Old array: \n");
+	displayArr (numbers, MAX-1);
 	max=heapifyMax (numbers);
 	sortMax (max);
 	printf ("Sorted array (ascending order): ");
